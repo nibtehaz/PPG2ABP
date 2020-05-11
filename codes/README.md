@@ -27,17 +27,17 @@ A GPU would be essential to train the model, but not necessary when merely testi
 
 Before using the pipeline please install the following python modules
 
-> h5py == 2.9.0
-> numpy == 1.17.0
-> tqdm == 4.19.5
-> matplotlib == 2.2.3
-> seaborn == 0.9.0
-> scipy == 1.4.1
-> scikit-learn == 0.19.1
-> tensorflow-gpu == 1.5.0
-> Keras == 2.2.4
-> Keras-Applications == 1.0.8
-> Keras-Preprocessing == 1.1.0
+> h5py == 2.9.0  
+> numpy == 1.17.0  
+> tqdm == 4.19.5  
+> matplotlib == 2.2.3  
+> seaborn == 0.9.0  
+> scipy == 1.4.1  
+> scikit-learn == 0.19.1  
+> tensorflow-gpu == 1.5.0  
+> Keras == 2.2.4  
+> Keras-Applications == 1.0.8  
+> Keras-Preprocessing == 1.1.0  
 
 
 Install the requirements by using the following command
