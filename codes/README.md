@@ -1,4 +1,4 @@
-# PPG2ABP
+# PPG2ABP Codes
 The pipeline of PPG2ABP has been implemented in Python v3.5.2, and the deep learning models have been implemented in Keras with Tnesorflow backend.
 
 ## Contents
@@ -67,15 +67,15 @@ Alternatively, you may extract the file using some other software and put the ex
 
 ## Smaller Portion of Data to Test PPG2ABP
 
-Please download the downsampled version of the original dataset [data.hdf5](https://drive.google.com/file/d/1GtsQgPP_gEdeTJHws_O9zL8BviUBWfEO/view?usp=sharing) to perform the tests, please refer to *PPG2ABP.ipynb* for further reference
+Please download the downsampled version of the original dataset [data.hdf5](https://drive.google.com/file/d/1GtsQgPP_gEdeTJHws_O9zL8BviUBWfEO/view?usp=sharing) to perform the tests, please refer to [PPG2ABP.ipynb](https://github.com/nibtehaz/PPG2ABP/blob/master/codes/PPG2ABP.ipynb) for further reference
 
 ## Expected Results
 
-The Expected results are presented at the last secion of the Jupyter Notebook *PPG2ABP.ipynb*, which are identical to that presented in the paper, please refer to *PPG2ABP.ipynb* for further information
+The Expected results are presented at the last secion of the Jupyter Notebook [PPG2ABP.ipynb](https://github.com/nibtehaz/PPG2ABP/blob/master/codes/PPG2ABP.ipynb), which are identical to that presented in the paper, please refer to [PPG2ABP.ipynb](https://github.com/nibtehaz/PPG2ABP/blob/master/codes/PPG2ABP.ipynb) for further information
 
 ## Demo 
 
-You may run PPG2ABP using the comprehensive instructions presented in the *PPG2ABP.ipynb*
+You may run PPG2ABP using the comprehensive instructions presented in the [PPG2ABP.ipynb](https://github.com/nibtehaz/PPG2ABP/blob/master/codes/PPG2ABP.ipynb)
 
 ## Instructions for Using the Scripts
 
