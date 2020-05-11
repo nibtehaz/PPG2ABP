@@ -1,9 +1,25 @@
+"""
+    Models used in experiments
+"""
+
 from keras.layers import Input, Conv1D, MaxPooling1D, UpSampling1D, concatenate, BatchNormalization, Activation, add
 from keras.models import Model, model_from_json
 from keras.optimizers import Adam
 from keras.callbacks import ModelCheckpoint
 
 def UNet(length, n_channel=1):
+    """
+        Standard U-Net
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
     
     x = 32
 
@@ -69,6 +85,18 @@ def UNet(length, n_channel=1):
 
 
 def UNetWide64(length, n_channel=1):
+    """
+       Wider U-Net with kernels multiples of 64
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
     
     x = 64
 
@@ -134,7 +162,20 @@ def UNetWide64(length, n_channel=1):
 
     return model
 
+
 def UNetDS64(length, n_channel=1):
+    """
+        Deeply supervised U-Net with kernels multiples of 64
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
     
     x = 64
 
@@ -210,6 +251,18 @@ def UNetDS64(length, n_channel=1):
 
 
 def UNetWide40(length, n_channel=1):
+    """
+       Wider U-Net with kernels multiples of 40
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
     
     x = 40
 
@@ -277,6 +330,18 @@ def UNetWide40(length, n_channel=1):
 
 
 def UNetWide48(length, n_channel=1):
+    """
+       Wider U-Net with kernels multiples of 48
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
     
     x = 48
 
@@ -344,6 +409,18 @@ def UNetWide48(length, n_channel=1):
 
 
 def UNetLite(length, n_channel=1):
+    """
+       Shallower U-Net
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
 
     inputs = Input((length, n_channel))
     conv1 = Conv1D(32,3, activation='relu', padding='same')(inputs)
@@ -397,8 +474,19 @@ def UNetLite(length, n_channel=1):
     return model
 
 
-
 def MultiResUNet1D(length, n_channel=1):
+    """
+       1D MultiResUNet
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
 
     def conv2d_bn(x, filters, num_row, num_col, padding='same', strides=(1, 1), activation='relu', name=None):
         
@@ -539,8 +627,21 @@ def MultiResUNet1D(length, n_channel=1):
     model = Model(inputs=[inputs], outputs=[conv10])
 
     return model
-    
+
+
 def MultiResUNetDS(length, n_channel=1):
+    """
+       1D Deeply Supervised MultiResUNet
+    
+    Arguments:
+        length {int} -- length of the input signal
+    
+    Keyword Arguments:
+        n_channel {int} -- number of channels in the output (default: {1})
+    
+    Returns:
+        keras.model -- created model
+    """
 
     def conv2d_bn(x, filters, num_row, num_col, padding='same', strides=(1, 1), activation='relu', name=None):
         

@@ -1,7 +1,19 @@
-from scipy.stats import kurtosis, skew
+"""
+    Metrics used
+"""
+
 import numpy as np
 
 def BHS_standard(err):
+    """
+		Computes the BHS Standard metric
+		
+		Arguments:
+			err {array} -- array of absolute error
+		
+		Returns:
+			tuple -- tuple of percentage of samples with <=5 mmHg, <=10 mmHg and <=15 mmHg error
+    """
     
     leq5 = 0
     leq10 = 0
@@ -26,15 +38,3 @@ def BHS_standard(err):
     return (leq5*100.0/len(err), leq10*100.0/len(err), leq15*100.0/len(err))
 
 
-def skewness(ppg):
-    
-    sk = []
-    
-    sk.append(skew(ppg[:200]))
-    sk.append(skew(ppg[200:400]))
-    sk.append(skew(ppg[400:600]))
-    sk.append(skew(ppg[600:800]))
-    sk.append(skew(ppg[800:1000]))
-    
-    return np.mean(sk)
-    
